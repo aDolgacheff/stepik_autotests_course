@@ -1,5 +1,5 @@
-# stepik_autotests_course
-Stepik course homeworks by selenium and pytest
+# Final project of the autotests course
+
 https://stepik.org/course/575/info
 
 ## Запуск тестов
