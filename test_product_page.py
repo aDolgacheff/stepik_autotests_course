@@ -1,5 +1,4 @@
 from .pages.product_page import ProductPage
-import time
 
 
 def test_guest_can_add_product_to_basket(browser):
@@ -8,5 +7,5 @@ def test_guest_can_add_product_to_basket(browser):
     page.open()
     page.click_add_to_basket_btn()
     page.solve_quiz_and_get_code()
-    product_name = page.get_product_name()
-    time.sleep(10)
+    page.should_be_product_name_in_message()
+    page.should_be_product_price_in_message()
