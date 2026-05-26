@@ -12,8 +12,8 @@ class ProductPage(BasePage):
         btn.click()
 
     def should_be_product_name_in_message(self, product_name):
-        successful_adding_message = self.browser.find_element(*ProductPageLocators.MESSAGE_SUCCESSFUL_ADDING).text
-        assert product_name == successful_adding_message, "Название товара не соответсвует названию в уведомлении"
+        product_name_in_alert = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_ALERT).text
+        assert product_name == product_name_in_alert, "Название товара не соответсвует названию в уведомлении"
 
     def should_be_product_price_in_message(self):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
